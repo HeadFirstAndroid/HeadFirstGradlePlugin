@@ -9,14 +9,17 @@ dependencies {
 
 publishing {
 
-    version = '1.0.0'
-    group = 'me.yifeiyuan'
+//    version = '1.0.0'
+//    group = 'me.yifeiyuan'
 
     publications {
 
         mavenJava(MavenPublication) {
-            artifactId = 'my-library'
+            artifactId = 'standalone-plugin'
             from components.java
+            version = '1.0.1'
+            group = 'me.yifeiyuan'
+
             versionMapping {
                 usage('java-api') {
                     fromResolutionOf('runtimeClasspath')
