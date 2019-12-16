@@ -6,7 +6,7 @@ class BuildSrcPlugin implements Plugin<Project> {
 
     @Override
     void apply(Project project) {
-        project.task("hi22") {
+        project.task("hiBuildSrc") {
             doLast {
                 println("Hi from buildSrc project")
             }
