@@ -1,6 +1,66 @@
 apply plugin: 'groovy'
+apply plugin: 'maven-publish'
+
 
 dependencies {
     implementation gradleApi()
     implementation localGroovy()
+}
+
+publishing {
+
+    version = '1.0.0'
+    group = 'me.yifeiyuan'
+
+    publications {
+
+        mavenJava(MavenPublication) {
+            artifactId = 'my-library'
+            from components.java
+            versionMapping {
+                usage('java-api') {
+                    fromResolutionOf('runtimeClasspath')
+                }
+                usage('java-runtime') {
+                    fromResolutionResult()
+                }
+            }
+            pom {
+                name = 'My Library'
+                description = 'A concise description of my library'
+                url = 'http://www.example.com/library'
+                properties = [
+                        myProp          : "value",
+                        "prop.with.dots": "anotherValue"
+                ]
+                licenses {
+                    license {
+                        name = 'The Apache License, Version 2.0'
+                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'johnd'
+                        name = 'John Doe'
+                        email = 'john.doe@example.com'
+                    }
+                }
+                scm {
+                    connection = 'scm:git:git://example.com/my-library.git'
+                    developerConnection = 'scm:git:ssh://example.com/my-library.git'
+                    url = 'http://example.com/my-library/'
+                }
+            }
+        }
+    }
+
+    repositories {
+        maven {
+            // change to point to your repo, e.g. http://my.org/repo
+//            url = "repos"
+//            url = "$buildDir/repos"
+            url = "$rootProject.projectDir/repos"
+        }
+    }
 }

@@ -1,6 +1,9 @@
 # 深入浅出 Gradle Plugin
 
 
+1. buildSrc 
+2. 独立工程
+
 ## 简单的插件例子
 
 ```groovy
