@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'me.yifeiyuan.buildsrctest'
+
 android {
     compileSdkVersion 29
     defaultConfig {
