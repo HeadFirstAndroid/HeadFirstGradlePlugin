@@ -9,8 +9,8 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'me.yifeiyuan.buildsrctest' //通过 pluginid 引用
 apply plugin: DirectPlugin //通过类名引用
 
-apply plugin: 'me.yifeiyuan.myplugin'
-apply plugin: 'me.yifeiyuan.myplugin2'
+//apply plugin: 'me.yifeiyuan.myplugin'
+//apply plugin: 'me.yifeiyuan.myplugin2'
 
 android {
     compileSdkVersion 29
