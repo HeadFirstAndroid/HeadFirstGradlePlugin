@@ -12,6 +12,8 @@ apply plugin: DirectPlugin //通过类名引用
 //apply plugin: 'me.yifeiyuan.myplugin'
 //apply plugin: 'me.yifeiyuan.myplugin2'
 
+//apply plugin: 'me.yifeiyuan.ktplugin' //有问题 找不到
+
 android {
     compileSdkVersion 29
     defaultConfig {

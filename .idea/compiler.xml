@@ -11,5 +11,8 @@
       <entry name="!?*.kt" />
       <entry name="!?*.clj" />
     </wildcardResourcePatterns>
+    <bytecodeTargetLevel>
+      <module name="plugin-kotlin" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>

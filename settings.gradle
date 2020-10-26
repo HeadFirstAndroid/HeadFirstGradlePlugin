@@ -1,2 +1,3 @@
+//include ':plugin-kotlin'
 include ':app', ':standalone-plugin'
 rootProject.name='HeadFirstGradlePlugin'
